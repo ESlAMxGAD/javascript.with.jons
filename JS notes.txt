@@ -1,0 +1,1380 @@
+				------------	JS fundamintals part 1 😉   ------------
+
+
+			------------	A brief intorduction to javaScript 😁  ------------
+
+
+=> javascript : is high level, object oriented, multipradigms programming language 
+
+	-> programming language -> is a tool to allow us to write code which instruct computer to do things
+
+	-> high level	        -> we dont need worry about complex stuff like memory management
+
+	-> object-oriented      -> based on objects for storing most kind of data 
+
+	-> multi-paradigms      -> we can use diffrent styles of programming 
+
+
+=> Main technologies in web development 
+
+	- HTML -> responsible for the content and the structure of web page    
+
+	- CSS  -> responsible for presintation of elements written by html like visual styling and elements layout
+
+	- JS  -> allow us to add dynamic and interactive effects to any webPage
+
+		  -> also used to manipulate the content and elements 
+			
+		  -> load data from remote servers and biuld entire application in the browser which called web application
+
+
+
+=> what JS can do
+
+	1- build dynamic effects and web applications in the browser => front-end web applications
+
+	2- JS can run on the server by using modern technology called NODE JS -> Back-end application
+
+
+		* back-end application -> application run on the server and deal with database
+
+
+	3- can used to biuld native mobile application by using React native
+
+
+	4- Desctop application
+	
+
+
+			------------ Linking javaScript file 😜  ------------
+
+
+- we need to attach JS to html document usally you are going to build web applictations
+
+- we can write JS code in 2 places
+
+	1- using inline Script :
+
+	    using <script> element written in html document  </script>
+
+	* the only advantage to use inline script is you dont need to load external file
+
+
+
+	2- use external javaScript files -> its the best practice to separate between presentaion and logic
+
+		then you need to link between html document and js file usually we do this at the end of the body
+
+			<script src"path.js"></script>
+
+
+note that : console is an environment built to execute small pieace of code and show the result immediately.
+
+	-> but does not show the result of our code by default if you are not in the console
+
+	-> if you want to do that you have to tell js where you want you output appear
+
+		==> console.log() ;  to make output appear in the console if you write code in script tag from html document
+
+
+
+			      ---------- Values and Variables 😁  ------------
+
+
+
+Values : is a peace of data . fundamintal unit of information that we have in programming 	
+	
+	* if we want to store value .. then we use variable to store values
+
+	-> by this way we can use them over and over again
+
+-> variable declaration 
+
+	let variable-name = value ;   -> declaring a variable
+
+
+	let first-name = "mohamed" ;
+
+
+
+-> we can imagine variable like a box . box can hold objects like book, then we need to give box a label , so if we want to    
+
+  get back the box , all we need to do is using the label 
+
+-> variable work by the same way
+
+
+
+
+=> rules to name the vairables
+
+	- you cannot start variable name with a number
+
+	- you cannot use any reserved keywords 
+		
+		* " name " is reserved keyword but still allowed to be used 
+
+		-> but in some cases it makes problems 
+
+	- you cannot use any special characters only under score _  and dollar sign $ 
+
+
+	important conventions : 
+
+
+		1- usually we use camel Case notation to name variable --> firstName |  lastName
+
+			* this is a standard way to name variables in javaScript
+
+		2- Don't start your variable with uppercase letter because we use this way to name classes 
+ 
+			* we use uppercase letters to constant variable like PI 
+
+		3- make sure that your variable name is decriptive this is because 2 reasons 
+
+			* its very important  to write clean code 
+		
+			* it's important to understand what the value stored in varibale by reading variable name only 
+
+
+=> first time you declare the variable use let keyword .. but when you want to reassign value do it without let .
+
+
+				-----------  DATA TYPES 🙂  ------------
+
+
+- in any programming language values can be diffrent types based on type of data they hold
+
+
+- Data types in javaScript 
+
+	in JS value can be object data type (reference type) or primitive datatype
+
+=> primitive datatypes 
+
+	1- Numbers => also called floating point numbers => used for integers and decimal
+ 
+			let num = 23 ;
+
+	2- String  => sequence of characters => used for text => written in single or double qoutes
+
+			let firstName = "mohamed" ;
+
+	3- boolean =>logical type that can only be  true or false values => used for making decisions 
+
+
+	4- undefined => value taken by the variable that is not yet defined it called(undefined variable) => ("empty value")
+
+		* undefined variable -> variable is decalred but had never be assigned to a value 
+
+			let children ;     -> then children in undefined variable
+
+			- variable is called undefined    - value also called undefined 
+			
+
+	5- Null => also means "empty value" but used in diffrrent circumstances used in objects
+
+
+	6- symbol(ES2015) => value that is unique and cannot be be changed  [Not useful for now] 
+
+
+	7 BigInt(ES2020) => larger integer than Number type can hold 
+
+
+
+				***** Important note *****
+
+" javaScript has dynamic typing : we dont have to manually define the data type of the value stored in the variable
+ 
+  instead that data types are determined automatically "
+
+=> which allow us to assign new value to the same variable in the program without problems
+
+
+
+=> Warining ⚠️⚠️   
+
+	-> Values which have datatype not the variable
+
+			* Because varibale just store the values which has the datatype
+
+
+
+=> typeof  variable_name ;  
+
+ "typeof" is an operator used to return the datatype of value stored in the variable 
+
+Example :
+
+	let firstName = 'mohamed' ;
+
+	console.log(typeof firstName)		// will return String
+
+
+=> notes on comment
+
+		-> used to deactivate code without deleting it
+
+		-> types of comments
+
+			1- single line comment  //
+
+			2- multi_lines comment  /**/
+
+
+
+				------------  let, const and var  😏  ------------
+
+
+we have 3 diffrent ways to declare variable 
+
+
+	- let and const -> introduced in ES6  => modern javaScript
+
+	- var is an old way to declare variable 
+
+
+					-------- let  ---------
+
+
+	1- used to declare varialbe that can changed later => that means during execution of the program
+
+		technically this called reassigning value to the variable  (mutate the variable)
+
+				let age =20;
+
+				age =21;   // reassigning value or mutate the variable 
+
+
+	2- used to declare empty variable ( undefined variable )
+
+				let name ;
+
+
+	3- let is block scope 
+
+					-------- const  ---------
+
+
+	-> used to declare variable that is not supposed to change at any point in the future  "unmutable variable"
+
+		* we can say value with const variable is never change 
+
+		* if you try to change => TypeError will happen
+
+	-> you cannot declare empty const variable  -> this is illegal
+		
+		that means you cannot do this => const firstName ;   // you have to assign value
+
+	-> const is block scope 
+
+*** GOOD ADVISE 😉 ***
+	
+	-> use const by default to declare your variables and let if you are sure that this variable is mutated
+
+	-> because the best pactice to have little variable mutations or variable changes as posiible 
+
+ 		* changing variable introduce a potential to create bugs , Basically errors in your code
+
+* global scope => you can  access and reassign it from anywhere from the programm
+
+* block scope => only can be accessed inside the block which declared in 
+
+
+					-------- var  ---------
+
+==> this one should actually be completed avoided 
+
+		-> this is the old way to declare variable before ES6 
+	
+		-> like let used to declare variable that can be changed later  (mutated variable)
+
+		-> var is function scoope
+
+
+
+			****** ⛔ NEVER write a variable without declaring it  ⛔ ******
+
+
+		Don't write this ->  firstName = "mohamed";
+
+		this will work but will cause some problems later 
+
+
+
+				--------  Basic Operators 😜  ---------
+
+
+=> Definition :
+
+		operator : allow us to transform value or combine miltible values 
+
+		" operators always work with values "
+
+
+Types of operators :
+
+		1- mathematical operator  || arithematic operator
+	
+			- Addition +
+
+			- Subtraction -
+		
+			- Multiplication *
+
+			- Exponential (power) **    => 2**3 means 2 to power 3 = 2*2*2 =8
+
+			- Division /
+
+			- Modulus %
+
+
+
+		notes on plus operator + 
+
+			- we can use it to concatinate strings 
+
+
+
+	2- typeof operator => return the datatype of value stored in the variable
+
+
+	3- assignment operator " = " 
+
+			-> you can use composite operators here 
+
+				+=	-=	*=	/= 	%= 
+
+
+
+			-> post-increment  x++	//	x = x+1		-> pre-increment   ++x  //	x = x+1
+
+			-> post-decrement  x--	//	x = x-1		-> pre decrement   --x  //	x = x-1
+
+
+
+	4- Comparison operators => used to produce boolean values  => which will be used to take decision
+
+		>  <   >=   <=   ==  ===   !=  
+
+				--------  Operators precedence 😜  ---------
+
+	you can see operators precedence table at MDN
+
+
+				--------  Strings and template literals 😜  ---------
+
+	some important concepts:
+
+	()   =>  Parentheses
+
+	{}  =>   curly braces
+
+	[]  =>   square brackets
+
+	``  =>  backticks
+
+
+
+=> we have 2 ways to build strings 
+
+-> old way :  by using concatenation 
+
+ Example :
+				
+	const mohamed = "Hi, i'm " + firstName + " i'm " + (2023 - birthday) + " years old " + job ;
+
+
+-> new way in ES6 :  by using template literals 					
+											
+Definition :
+
+	* write String in a normal way and insert variable directly into string then they simply be replaced
+	
+	* we use backticks to make template literals not double or single quotes
+
+	``   => called backticks to tell JS you are going to use template literals
+
+	${}  => called placeholder to write variable or anything you want
+
+Example : const mohamed =  `Hi, i'm ${firstName}, i'm ${2023-birthYear} years old ${job}`
+						
+				
+* important note : we can use backticks `` to write String even we are not going to use template literals
+
+  => summary :
+
+	        => ${}  => called placeholder
+
+		=> `` backticks used to write multiple line string -> this gonna be useful when we create html elements
+
+
+		
+			-------- Taking decisions if / else statement 😜  ---------
+
+			
+
+if / else control structure : allow us to control the way by which our code is executed .
+
+	if(boolean condition) {
+		
+			block of code will be executed if this condition is true
+
+			} else {
+			
+				this block will be executed if this condition is false
+			}
+		
+
+else statement is optional and then you will use one way if statement
+
+
+
+			-------- type conversion and type coercion 😜  ---------
+
+
+=> Type conversion : when we manually convert from one datatype to another one  (explicitly)
+
+=> Type coercion   : when JS automatically convert datatypes behind the scenes for us (implicitly)
+
+
+(1) Type conversion : its happen only at the line in which conversion written that mean it give us a converted version
+
+ 		       that means original value does not converted
+
+
+** JS can only convert to 3 datatypes  -> Number  -> String   -> Boolean
+
+	1- converting string to number   ==> Number()  ;
+
+				- Number('20') + 10;  // 20 + 10 => 30 
+
+⚠️ if you try to convert String doesnot have number to number datatype you will get NaN
+
+-> NaN : means invalid number -> you got this value whenever an operation involves numbers failed to produce a new number.
+	
+Example :
+  
+	- Number("mohamed")   => output NaN
+
+=> NAN => stands for not a number
+
+
+	2- converting number to String   ==> String()  
+
+
+
+(2) Type coercion : happen when operator deal with two different datatypes so JS behind the scenes convert one value to 
+
+		    another type ; so by the end operation can be executed
+
+ 
+
+
+		+ plus operator will convert any number to string then concate them
+
+		- subtraction operator will convert string to the number 
+
+		* subtraction operator will convert string to the number
+
+		/ subtraction operator will convert string to the number
+
+		% subtraction operator will convert string to the number	
+
+
+=> Summary 😉 
+
+-> only + operator will convert number to string then concate them otherwise all operators will convert string to number
+
+				-------- Truthy and Falsy values 😜  ---------
+
+
+=> falsy value  => value that are not exactly false, but will become false if we try to convert it to boolean
+
+-> 5 falsy values in JS
+
+		1- 0 
+
+		2- ''   -> empty string
+
+		3- undefined
+
+		4- null
+
+		5 NaN
+
+
+
+-> truthy value => value that are not exactly true but will be true if we try to convert it into boolean
+
+-> anything except 5 falsy values is a truthy value
+
+example : any number that is not zero or any string that is not empty
+
+		=> to convert to boolean   ==>  Boolean()
+
+Examples :
+		
+	1- Boolean(10)  // true 	2- Boolean("")  false	
+	
+-> in practice the conversion to boolean is always implicit not explicit that means it always type coercion that JS 
+
+	automatically convert to boolean datatype behind the scene
+
+
+=> when JS exactly do type coercion 🤔 ?
+
+- JS do type coercion in 2 scenarios
+
+	1- when using logical operators like and operator &&
+
+	2- in logical context like the condition in if else statement .. js will convert it to boolean
+
+
+		 	-------- Equality operators == VS. === 😜  ---------
+
+
+=> equality operator : used to check if two values are equal or not => will produce true or false value
+
+
+"===" called "strict equality operator" beacaue it does not perform any type coercion then it will return true if both value 	
+	  are exactly the same that include the datatype
+
+			18 === 18 is true   	but 	 '18' === 18  is false	
+
+
+"==" called "loose equality operator" -> it perform type coercion so datatype doesnot taken in consider
+
+ 	18 == 18 is true		'18' == 18  also true because string will be converted to the number
+
+
+=> Note that using loose equality operator may cause some bugs so ..
+
+-> The general rule to the clean code : avoid the loose equality operator as much you can .. so when you compare values 
+
+	always use strict equality operator with 3 equal signs 
+
+
+** if you need type conversion the best practise to do this manually 
+
+		------------	 important notes 🙂    ----------
+
+
+1-  the opposite of strict equality operator is    "	!==    "
+
+
+2- the opposite of loose equality operator is 	   "    !=     "
+
+
+
+
+	*********** You can get value from webpage by using prompt("")  function take input as string   *************
+
+
+
+
+				    -------- Boolean logic 😜  ---------
+
+
+=> boolean logic : is a branch of computer science which uses true or false values to solve complex logical problem
+
+=> logical operators -->  AND		OR		NOT  ... which used to compine true and false values
+
+
+1) AND operator &&  => give true when all operands are true 
+
+2) OR operator || => give true when only one operand is true 
+
+-> it's enough for one of them to be true to make whole operation equal true
+ 
+
+3) NOT operator !  => just invert true / false value 
+
+
+				--------  THE Switch statement 😜  ---------
+
+the switch statement is an alternative way to write complicated if else statement when only thing to do is compare one value 
+
+to multible diffrent options
+
+switch statement structure :
+
+	
+switch(value){
+
+case val :
+
+	block of code ;
+	break;
+
+default :
+
+	block of code ;
+	break;
+
+}
+
+important notes :
+
+- JS will check if entered value equal the value in case by using strict equality operator ===
+
+	* so switch statement is about equality not like comparing
+
+
+			 -------- The conditional (Ternary) operator  😜  ---------
+
+- conditional operator  | ternary operator : allow us to write conditionals in one line 
+
+- structure :
+
+	(boolean-expression) 
+
+	? single line of code will be executed if this expression is true 
+	
+	: what will be executed if it false ;
+
+
+Example :
+
+	const age = 20 ;
+
+	(age >= 18)
+
+ 	 ? console.log("you can get driving licence")
+ 	 : console.log("you can't drive yet");
+
+ 
+-Important notes :
+
+    * you can only have single statement in each term
+
+    * called ternary operator beacause it consist of 3 parts: Condition, If part, Else part
+
+	* it is an operator so it will produce value so in other hand operator is an expression
+
+	* so if we have a value so we can assign it to variable by this way we can make ternary operator so useful
+
+	* you can use it in conditionaly declaring variables
+
+Example :
+
+	const age = 12;
+
+	const canDrive = age>=18 ? true : false  ;  // conditionaly declaring varialbe
+
+Note that the final result of the operator will be the value true which will be assigned to the canDrive variable 
+
+=> warning if you want to do conditionaly declaring variable by using if else statment -> you have to declare varibale 
+
+outside if else block so you can access it outside the block
+
+
+IMPORTANT NOTE:
+
+	* you can use ternary operator in template literals because it is an expression and will produce value
+
+Example :
+
+	const age = 12;
+
+	console.log(`are this one adult : ${age >= 18 ? true : false}`);
+
+		// this example will print : "are this one adult : false"
+
+ 
+			 -------- STATEMENTS AND EXPRESSIONS  😜  ---------
+
+
+
+- Expression : small piece of code that produce value . 
+
+	* 3+4 is expression will produce 4
+
+	* it can be single value   like  1991  is also an expression
+
+
+- Statement : bigger piece of code will be executed and doesnot produce any value on itself
+
+		like full sentenses that translate actions . the actions which we want our program to perform
+
+	* if else statemnt 
+
+	* switch swatement 
+
+
+- you need to know diffrence between them because js will accept statement in places and expressions in diffrent one
+
+	
+					🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳
+	
+*****************************************************************************************************************************
+
+			 	------------	JS fundamintals part 2 🫡🫡   ------------
+
+
+Strict mode : special mode we can activate in JS which make it easier for us to write secure JS code by avoiding accedental 
+
+error By doing 2 things .
+
+	1- strict mode forbids us to do certain things 
+		
+ * for example using reserved words because it introduce list of reserved words like private or interface so you can't 
+	
+		use these words to name variables
+
+	2- create visible errors for us. which without strict mode JS will fail silently without let us know we did a mistake
+
+		* for example we wrote  wrong variables name .. this give you undefined variable 
+
+
+=> How we can activate strict mode :
+	
+	=> by writing 'use strict'  -> the first line in the script.
+
+Warning ⚠️⚠️ :
+
+	=> if you write any code before 'use strict' then strict mode will not be activated .. but comments allowed
+
+
+				------------	Functions 🫡🫡   ------------
+
+function : block of code which we can reuse it whenever we want  like variable but
+
+	variable -> can hold only one value , function can hold block of code
+
+Example :
+
+function juiceProcessor(appels, oranges) {
+  console.log(appels, oranges);
+  const juice = `this juice with ${appels} appels and ${oranges} oranges .`;
+
+  return juice; // result of executing the function
+}
+
+
+const juice = juiceProcessor(3,4);
+	
+Notes :
+
+1- use function keyword to define the function 
+
+2- define functionName -> like variable it must be declarative and readable
+
+3- (function parameters) : variables specific only to this function that mean will only get defined when function executed
+	
+	"inputs of function"
+
+4- {function body} : this block of code will be executed when you call the function
+
+5- when you need to use function write function name and pass the actual values of parameters 
+
+6- 3,4 -> called arguments : actual values of parameters passed when you call , invoke , run(execute) the function
+
+7- return value -> this is the result of executing this function so if you want to use it you can store in the variable
+
+8- note all functions need to return something -> so it will retrun undefined value ofcourse you wont save it in valriable😂
+
+9- not all functions need to take parameters so open the parenthess and let it empty like this -> ()
+
+
+=> the importance of using function :
+
+- allow you to achive very important principle of writing clean code callde "dry principle" 
+
+- dry -> stands for dont repeat yourself
+
+- function allow us to write dry code because its reusable blocks of code , that together make up all application
+
+
+		------------	Function declaration VS. function expression 🫡🫡   ------------
+	
+=> there are two way for writing functions in JS
+	
+
+1- function declaration -> by using function keyword to declare a function and give it name 
+
+Example :
+
+	
+function calcAge1(birthYear, currentYear) {
+  return currentYear - birthYear;
+}
+
+
+2- function expression  | anonymous function  
+
+this function without name and we store it in the variable then use this variable to invoke this function
+
+Example :
+
+	const calcAge2 = function (birthYear, currentYear) {
+  		return currentYear - birthYear;
+	};
+
+
+const age2 = calcAge2(2002,2023);
+
+Notes :
+
+	- function part is an expression which will produce the value which will be stored in the variable
+
+	- in JS function is a value so we can store it in the variable like we did with anonymous function
+
+The main diffrence between function declaration and function expression is 
+	
+	=> function declaration can be invoked before its declaration like this :
+
+
+const age = calcAge1(2001,2023);
+
+function calcAge1(birthYear, currentYear) {
+  return currentYear - birthYear;
+}
+
+	=> but it is not a good idea to do this .. but you can do it if it necessary .
+
+	=> it doesnot work with function expression .
+
+	=> to make code nice structured you need to define all functions at the top of the code then you call them .
+
+
+
+			------------	ARROW FUNCTIONS 🫡🫡   ------------
+
+	
+- this is the 3rd type of functions added in ES6
+
+=> arrow function : is the special form of function expression witch shorter and faster to write.
+
+* there are many scenarios for the arrow function 
+
+	1- if we have one parameter and one line th be returned 
+
+	const variable =  (parameter) => what you want to return ;
+
+	Example :
+
+		const calcAge3 = (birthYear) => 2023 - birthYear;
+
+	2- if you more than one parameter you can put them inside parenthess
+
+
+	Example :
+
+		const calcAge3 = (birthYear,currentYear) => currentYear - birthYear ;
+
+
+	3- if you have more than one line in function body then you need curly brackits and return keyword
+
+
+	Example : 
+
+		const clacAge3 = () => {
+				
+				
+			return 	
+		}
+
+
+		------------	SUMMARISE OF ALL TYPES OF FUNCTIONS 🫡🫡   ------------
+
+1- function declaration
+
+	- we use function keyword and this function has a name
+
+	Exmaple 
+
+		function calcAge(birthYear,currentYear){
+				
+				return currentYear - birthYear;
+			}
+
+
+2- function Expression -> called anonymous function
+
+		- this function does not have name ; its a value so you need to save in variable
+		
+		- then you will use this variable to invoke the function
+
+		Example :
+
+			const calcAge = function(birthYear,currentYear){ retrun currentYear - birthYear  }
+
+
+3- arrow function :
+
+		- special type of anonymous or expression function so it has no name too
+
+		- used if you have one or more parameters and singe line to be executed
+
+		- the return part will heppend impilicity 
+
+		- if you have more than one line body you need curly brackits and return key word
+
+		
+
+		Example :
+
+		const calcAge = (birthYear , currentYear) => currentYear - birthYear ;
+
+
+
+					---- ⛔ Special Note ⛔ ----  
+	
+
+=> arrow function doesnot get this keyword
+
+
+
+
+		------------	FUNCTION CALLING ANOTHER FUNCTION  🫡🫡   ------------
+
+Example :
+
+
+const cutFruits = (fruit) => fruit * 4;
+
+const juiceProcessor = function (appels, oranges) {
+  const applePeaces = cutFruits(appels);
+  const orangePeaces = cutFruits(oranges);
+  return `this juice with ${applePeaces} piece of appels and ${orangePeaces} piece of oranges`;
+};
+
+console.log(juiceProcessor(3, 4));
+
+
+
+			------------	Introduction to array 🫡🫡   ------------
+
+=> Array is data Structure into which we can throw variables and then later reference them. 
+
+=> used to store multiple related values in on variable .
+
+=> its important because programming most of the time is about data ; we got data from somewhere store , process it
+
+and then give some data back so this data should be stored for that we have DataStructure
+
+
+=> Most important datastructures in JS => Array and Object
+
+=> There are 2 ways to declare array
+
+	1- literal syntax -> by using square brackets  => const friends = ['Mohamed','Ahmed','Yasser'] ;
+
+	2- by using Array() function => const friends = new Array('Mohamed','Ahmed','Yasser')	;
+
+
+=> array can hold any number of values we want and any types of values we need
+
+=> array can hold values with diffrent datatypes 
+
+Example :
+
+	const mohamed = ['mohamed',2002,'Software engineer',22] ;
+
+=> we access array elements by using index -> always remember that array zero based -> arrayName[index];
+
+=> we can get the length of array [number of elements of it] => by using length properity
+
+Example :  mohamed.length ;  => this expression will return 4
+
+Nice trick we can use it to get the last element of array -> mohamed[mohamed.length - 1];
+
+=> you can use index to change or mutate the value of array element 
+	
+	friends[2] = 'Yasser' ;
+
+	--- Warning ⚠️ ---
+
+1- when using const keyword to declare variable you can't mutate primitive dataTypes only and array is not primitive datatype
+
+2- but you cant change the whole array by using another array this illegal
+
+		friends = ['yousef','omar','bassel'] ;  // this illegal
+
+
+		------------	Basic array methods (operations) 🫡🫡   ------------
+
+
+					--- methods to add element ---
+
+1- push()  => used to add one element at the end of array
+	
+		* push() method will return the length of new array but usually we dont need this at all we cacl it 
+
+2- unshift() => 	used to add the element at the begging of array -> at index of zero
+
+		* unshift() method will return the length of new array but usually we calc it seperately if we need it
+
+
+				--- methods to remove element ---
+
+
+3- pop() => used to remove the last element of array 
+
+	    * pop() method will return the last element which removed 
+
+
+4- shift()	=> used to remove element from the begining of array 
+
+		* shift() method will return the removed elemnt from th array
+
+
+	--- methods to find element or check if it exist ---
+
+5- indexOf('value') => used to find the index of this element
+		 
+	* return the index of passed element  -> if this element exists
+
+	=> if this element doesnot exist will return -1 
+
+
+6- includes(element) => used to check if this element existin array or not => added in ES6
+
+	=> return true -> if element exists
+
+	=> return false -> if element does not exist 
+
+important note -> this method use strict equality operator to check if the element exist or not
+
+=> this method used to wrote conditions this is very useful application of this method
+
+
+7- sort() => this method used to order elements from a to z so used if array elements of type of string
+
+8- reverse() => this method reverse the order of array elements 
+
+9- slice(startIndex,endIndex) => Returns a copy of a section of an array ; endIndex doesnot included
+
+10- splice(start , number of elements to be deleted? , new items?) =>
+
+ 	Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements
+
+		 
+
+		------------	Important notes  🫡🫡   ------------
+
+1- if you want to use ternary operator in the function expression separate between the value will be produced of the 
+
+  expression and what this function will return 
+
+	-> if you want to return this value you have to use return key word 
+
+Example :
+
+const calcTip = funcion(bill) {
+		
+	return  bill>=50 && bill <=300 ? bill* 0.15 : bill * 0.20 ;	
+}
+
+this expression will return the value which will be returned from the function
+
+
+2- if you want to use ternary operator with arrow function you dont need return key word to return the value returned from 
+
+the expression
+
+Example :
+
+	const calcTip = (bill) => bill >=50 && bill <= 300 ? bill * 0.15 : bill * 0.20 ;
+
+
+		------------	Introduction to objects  🫡🫡   ------------
+
+
+=> object is a data Structure used to store muiltible related values in one variable but we  define			 
+
+	key and value paris
+
+
+=> How we can declare object
+
+	- we use object syntax literal -> by using curly braces {}
+		
+		* called object syntax literal because we literally writting down all the content of object
+		
+const mohamed {
+
+	fitstName : 'mohamed',
+	lastName : 'asem',
+	age : 21,
+	friends : ['Ahmed','Omar','AbdElrahman']
+} ;
+
+
+=> value can be any datatype 
+
+=> each of this key also called properity and each properity has a value
+
+
+			--- Diffrence between object and array  😜😜 ---
+
+=> in object the order of this values doesnot matter at all when we want to retrieve them we retrieve value by using key name
+
+=> but the only way to access array element by using there index.
+
+=> we use array for order data .
+
+=> we use object for unstructured data -> data we want to name and retrieve it based on its name .
+
+=> array is special type of object .
+
+
+		------------	Dot VS. Square Bracket notation 😎😎   ------------
+
+important note : when you log the object to the console properities will orderd alphabitically
+
+	* it doesnot matter because we got properity from the object by using properity name itself
+
+=> We have to ways to get properity from the object
+
+1- by using DOT notation => dot is an operator called member access
+
+Example :
+
+const mohamed = {
+  name: "mohamed",
+  job: "student",
+  age: 21,
+  birthday: 21,
+};
+
+	console.log(mohamed.birthday); // note that dot is an operator will go to this object and retrieve the properity
+
+2- by using square bracket notation 
+
+	=> called " computed member access " because we compute the value we want to access in the object
+
+	=> like array but you need to pass String of the name of properity you want to retrieve => " key "
+
+Example :
+
+	console.log(mohamed["name"]);
+
+=> in bracket notation -> we can pass any expression we want 
+
+Example :
+
+	console.log(mohamed['first'+'Name']);
+
+=> you can build this string by using both template literals and string 
+
+=> this thing doesnot work with Dot notation because by using dot you need to write the final properity as it in object
+
+=> you can use bracket notation if you want to get the key from the user 
+
+Example :
+
+	const key = prompt("what do you want to know about mohamed ?");
+
+	console.log(mohamed[key]);
+
+
+
+=> note that undefined is the value you will get if you want to access properity from object that doesnot exist
+
+	---- important note ----
+
+Dot notation (member access) and square bracket (computed member access) has the highest priority and executed from
+
+	left to right
+
+	------------	How to use Dot and Square Bracket notation to add new properities to the object  😎😎   --------
+
+
+
+=> Dot notation :
+
+	objectName.key = value ;
+
+=> brackets notation :
+
+	objectName["key"] = value ;
+
+
+			------------	Object Methods 😎😎   ------------
+
+=> function is really another type of values so we can make pair of " key : value " where value is a function
+
+=> you can only use function expression because expression will produce the value 
+
+Exmaple By using anonymous function :
+
+calcAge : function (birthYear, currentYear) {
+    return currentYear - birthYear;
+  }
+
+
+Exmaple By using arrow function :
+
+
+  calcAge2: (birthYear, currentYear) => currentYear - birthYear
+
+
+=> function which attached to the object called  " Method "
+
+** we can defiene the method : is a properity with function value
+	
+	----- Good philosopy -----
+
+- to keep your code DRY -> if you know value you must write in one place then refernce it , because if you write it mutible 
+
+	times you may have mistakes and if it changed you have to change it in all places you write
+
+
+			------------	this keyword 😎😎   ------------
+
+=> every method JS give it special variable called this .
+
+=> this qual the object calling the method
+
+=> this reference to the object itself
+
+=> by using this keyword we can access all object properities 
+
+=> it is not a good practise to write object name to access properity because if you change variable name code doesnot work 
+
+	dunamically .. this allow object to refere to itself without avoiding DRY principle
+
+
+Example :
+
+const Jonas = {
+  firstName: "Jonas",
+  job: "teacher",
+  friends: ["Micheal", "Peter", "Steven"],
+  birthYear: 1992,
+
+  calcAge: function (currentYear) {
+    return currentYear - this.birthYear;
+  },
+};
+
+------	Warining ------
+
+Arrow function cant use this keyword so dont try to do this 
+
+
+=> as you can use object name to add new properity ypu can also use this keyword
+
+Example :
+
+  calcAge: function () {
+    this.age = 2023 - 1992;
+
+	return this.age ;   // its good practise to return this result 
+  },
+
+
+
+		------------	Iteration : The For loop 😎😎   ------------
+
+loop : allow us to automated repetition tasks
+
+for loop statement structure :
+
+for(initial value of counter ; condition ; counter update){
+	loop body
+}
+
+Notes : loop keeps running while condition is true
+
+=> if you never update the counter value you will get infinit loop
+
+
+			------------	looping Arrays  😎😎   ------------
+
+=> one of the most useful application of for loop is looping thorugh arrays
+
+Example :
+
+const arr = ["mohamed", 21, ["Youseg", "Mazen", "Bassel"],"Amazing person"]; 
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+
+-----	Important Notes  -----
+
+1- the initial value of counter must be zero => because array zero based 
+
+2- the condition of loop continue must less than array length by one => last index = length -1
+
+3- counter used to retrive array values so it will be the same type of retrieved value
+
+Exercise => create new array contains the types of the vaules of another array .
+
+					---	Solution    ---
+
+const originalArr = ["mohamed", 21, ["Amira", "Donia", "Hepa"],"Amazing person"]; 
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+step 1 : creare empty array 
+	
+const copiedArr = [] ;  || const copiedArr = new Array();
+
+step2 : loop through " original array " to get the type of each value By using (typeof) operator and add it to copied one by using push() method
+
+for (let i = 0; i < originalArr.length; i++) {
+
+  arr2.push(typeof arr[i]);
+
+}
+
+=> Another solution : we fill array by using index like this 
+
+for (let i = 0; i < arr.length; i++) {
+  arr2[i] = typeof arr[i];
+}
+
+
+		------------	Break and continue statements  😎😎   ------------
+
+continue => used to exit the current itiration of loop and continue to the next one
+
+
+break 	 => used to exit from the whole loop
+
+
+		------------	looping backwards and loops in loops(nested loop)  😎😎   ------------
+
+
+Exmaple :
+
+const arr = ["mohamed", 21, ["omar", "ahmed", "yasser"], "Amazing person"];
+
+for (let i = arr.length - 1; i >= 0; i--) {
+  console.log(arr[i]);
+}
+
+
+				------------	while loop  😎😎   ------------
+
+while loop structure :
+
+while(expression == true){
+	loop body
+}
+ 
+Example to make evry thing clear :
+
+let counter = 1;
+while (counter <= 10) {
+  console.log(`iteration number ${counter}`);
+  counter++;
+}
+
+
+=> diffrence between while and for loop
+
+-> while expression can be anything away from number so if we have a problem without numer we should use while loop to solve
+
+-> we use while if we dont know the number of itiration we need 
+
+
+
+							🫡🫡🫡🫡
