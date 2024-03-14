@@ -1089,9 +1089,9 @@ Example :
 
 => How we can declare object
 
-	- we use object syntax literal -> by using curly braces {}
+	- we use object literal syntax -> by using curly braces {}
 		
-		* called object syntax literal because we literally writting down all the content of object
+		* called object literal syntax because we literally writting down all the content of object
 		
 const mohamed {
 
@@ -1169,13 +1169,11 @@ Example :
 
 	console.log(mohamed[key]);
 
-
-
-=> note that undefined is the value you will get if you want to access properity from object that doesnot exist
-
 	---- important note ----
+=> note that undefined is the value you will get if you want to access properity from object that doesnot exist
+bec if u access properity doesnot exist it will create a new property which dont have a value so as itsnot intiatiated with value so it will be undefined
 
-Dot notation (member access) and square bracket (computed member access) has the highest priority and executed from
+=> Dot notation (member access) and square bracket (computed member access) has the highest priority and executed from
 
 	left to right
 
@@ -1199,11 +1197,14 @@ Dot notation (member access) and square bracket (computed member access) has the
 => you can only use function expression because expression will produce the value 
 
 Exmaple By using anonymous function :
-
+-for object 
 calcAge : function (birthYear, currentYear) {
     return currentYear - birthYear;
   }
-
+-not object
+const calcAge = function (birthYeatr , currentYear){
+   return currentYear - birthYear ;
+}
 
 Exmaple By using arrow function :
 
@@ -1237,7 +1238,7 @@ Exmaple By using arrow function :
 	dunamically .. this allow object to refere to itself without avoiding DRY principle
 
 
-Example :
+Example 1 :
 
 const Jonas = {
   firstName: "Jonas",
@@ -1249,6 +1250,23 @@ const Jonas = {
     return currentYear - this.birthYear;
   },
 };
+
+=>this keyword can create object also 
+Example :
+const mecho = {
+  firsName: "eslam",
+  lastName: "salah",
+  birthYear: 2003,
+  job: "eng",
+  friends: ["michael", "peter", "steven"],
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+};
+console.log(mecho.calcAge());   // after i call function already the age property created
+console.log(mecho.age); // so here i called it normally as its created
+
 
 ------	Warining ------
 
